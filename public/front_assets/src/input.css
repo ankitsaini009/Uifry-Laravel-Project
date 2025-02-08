@@ -1,0 +1,218 @@
+/* src: url("{{asset('front_assets/public/fonts/GeneralSans-Extralight.woff2')}}") format('woff2'), */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'General Sans';
+    src: url('../public/fonts/GeneralSans-Extralight.woff2') format('woff2'),
+      url('../public/fonts/GeneralSans-Extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'General Sans';
+    src: url('../public/fonts/GeneralSans-Light.woff2') format('woff2'),
+      url('../public/fonts/GeneralSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'General Sans';
+    src: url('../public/fonts/GeneralSans-Medium.woff2') format('woff2'),
+      url('../public/fonts/GeneralSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'General Sans';
+    src: url('../public/fonts/GeneralSans-Bold.woff2') format('woff2'),
+      url('../public/fonts/GeneralSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'General Sans';
+    src: url('../public/fonts/GeneralSans-Regular.woff2') format('woff2'),
+      url('../public/fonts/GeneralSans-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'General Sans';
+    src: url('../public/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+      url('../public/fonts/GeneralSans-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+body {
+  font-family: 'General Sans';
+}
+
+@media (min-width: 360px) {
+  .container {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 428px) and (max-width: 575px) {
+  .container {
+    max-width: 388px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .news .swiper-slide {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal !important;
+}
+
+img {
+  display: inline;
+}
+
+.our-clients .swiper-slide {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heading-after {
+  position: relative;
+  z-index: 1;
+}
+
+.heading-after::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/uifry-heading-border-dark.webp');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.animeslide-slide.swiper-slide-active [data-animate] {
+  opacity: 1;
+  transform: none;
+}
+
+.animeslide-slide.swiper-slide-active .animeslide-desc {
+  transition-delay: 0.8s;
+}
+
+[data-animate] {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+[data-animate="bottom"] {
+  transform: translate3d(0, 15px, 0);
+}
+.accordion-item-active{
+  padding: 0;
+}
+.heading-border{
+  position: relative;
+  z-index: 1;
+}
+.heading-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/uifry-border-line.webp');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+.accordion-content.active {
+  max-height: 280px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+.accordion-btn.active, .accordion-content.active {
+  background-color: #1376F8;
+  color: white;
+}
+.accordion-btn.active{
+  border-bottom: 1px solid white;
+}
+.accord-item{
+  border-radius: 10px;
+  overflow: hidden;
+}
+.accordion-btn.active .toggle-icon{
+  border: 1px solid white;
+}
+.accordion-btn.active::before{
+  background: white;
+}
