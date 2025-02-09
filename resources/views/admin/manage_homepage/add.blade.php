@@ -25,176 +25,166 @@
             @endif
             <div class="col-12">
                 <h2>Manage Home Page</h2><br>
-                <form action="{{ route('manage_about.update') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('Manage_homepage.update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" name="Manage_abouts_id" value="{{(isset($Manage_about)?$Manage_about->id:'')}}">
+                    <input type="hidden" name="Manage_homepage_id" value="{{ isset($jsonData2) ? $jsonData2->id : '' }}">
                     <div class="row">
                         <div class="col-md-12 mb-3">
-                            <label for="mission_statement" class="form-label">Mission Statement</label>
-                            <textarea type="text" class="form-control" name="mission_statement" placeholder="Enter Mission Statement" id="site_description" autocomplete="off">{{(isset($Manage_about)?$Manage_about->mission_statement:old('mission_statement'))}}</textarea>
-
-                            @if ($errors->has('mission_statement'))
-                            <div class="text-danger">{{ $errors->first('mission_statement') }}</div>
-                            @endif
+                            <label for="hero_section_banner_title" class="form-label">Hero Section Banner Title</label>
+                            <input type="text" class="form-control" name="hero_section_banner_title" placeholder="Enter Hero Section Banner Title" value="{{ old('hero_section_banner_title', isset($PagesContantManage) ? $PagesContantManage['hero_section']['banner_title'] : '') }}">
                         </div>
-
-                        <div class="col-md-6 mb-3">
-                            <label for="about_image" class="form-label">About Image</label>
-
-                            @if(isset($Manage_about) && $Manage_about->about_image)
-
-                            <div class="mb-2">
-
-                                <img src="{{ asset('images/' . $Manage_about->about_image) }}" alt="User Image" class="img-thumbnail" width="100">
-
-                            </div>
-
-                            <input type="hidden" value="{{(isset($Manage_about)?$Manage_about->about_image:old('image'))}}" class="form-control" name="about_image" autocomplete="off">
-
-                            @endif
-
-
-                            <input
-                                type="file"
-                                class="form-control"
-                                name="about_image"
-                                id="about_image"
-                                accept="image/*">
-
-                            @if ($errors->has('about_image'))
-                            <div class="text-danger">{{ $errors->first('about_image') }}</div>
-                            @endif
-                        </div>
-
-                        <!-- Latest Technology Title -->
-                        <div class="col-md-6 mb-3">
-                            <label for="latest_technology_title" class="form-label">Latest Technology Title</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                name="latest_technology_title"
-                                id="latest_technology_title"
-                                placeholder="Enter Latest Technology Title"
-                                value="{{ old('latest_technology_title', isset($Manage_about) ? $Manage_about->latest_technology_title : '') }}">
-                            @if ($errors->has('latest_technology_title'))
-                            <div class="text-danger">{{ $errors->first('latest_technology_title') }}</div>
-                            @endif
-                        </div>
-
-                        <div class="col-md-6 mb-3">
-                            <label for="latest_technology_sub_description" class="form-label">Latest Technology Sub Description</label>
-                            <textarea
-                                class="form-control"
-                                name="latest_technology_sub_description"
-                                id="latest_technology_sub_description"
-                                placeholder="Enter Latest Technology Sub Description"
-                                rows="4">{{ old('latest_technology_sub_description', isset($Manage_about) ? $Manage_about->latest_technology_sub_description : '') }}</textarea>
-                            @if ($errors->has('latest_technology_sub_description'))
-                            <div class="text-danger">{{ $errors->first('latest_technology_sub_description') }}</div>
-                            @endif
-                        </div>
-
-
-                        <!-- Latest Technology Image -->
-                        <div class="col-md-6 mb-3">
-                            <label for="latest_technology_image" class="form-label">Latest Technology Image</label>
-                            @if(isset($Manage_about) && $Manage_about->latest_technology_image)
-
-                            <div class="mb-2">
-
-                                <img src="{{ asset('images/' . $Manage_about->latest_technology_image) }}" alt="User Image" class="img-thumbnail" width="100">
-
-                            </div>
-
-                            <input type="hidden" value="{{(isset($Manage_about)?$Manage_about->latest_technology_image:old('image'))}}" class="form-control" name="latest_technology_image" autocomplete="off">
-
-                            @endif
-
-                            <input
-                                type="file"
-                                class="form-control"
-                                name="latest_technology_image"
-                                id="latest_technology_image"
-                                accept="image/*">
-                            @if ($errors->has('latest_technology_image'))
-                            <div class="text-danger">{{ $errors->first('latest_technology_image') }}</div>
-                            @endif
-                        </div>
-
-                        <!-- Latest Technology Description -->
                         <div class="col-md-12 mb-3">
-                            <label for="latest_technology_description" class="form-label">Latest Technology Description</label>
-                            <textarea
-                                class="form-control"
-                                name="latest_technology_description"
-                                id="latest_technology_description"
-                                placeholder="Enter Latest Technology Description"
-                                rows="4">{{ old('latest_technology_description', isset($Manage_about) ? $Manage_about->latest_technology_description : '') }}</textarea>
-                            @if ($errors->has('latest_technology_description'))
-                            <div class="text-danger">{{ $errors->first('latest_technology_description') }}</div>
-                            @endif
+                            <label for="hero_section_description" class="form-label">Hero Section Description</label>
+                            <textarea class="form-control" name="hero_section_description" placeholder="Enter Hero Section Description">{{ old('hero_section_description', isset($PagesContantManage) ? $PagesContantManage['hero_section']['description'] : '') }}</textarea>
                         </div>
 
-                        <!-- About Patients Overview Title -->
                         <div class="col-md-6 mb-3">
-                            <label for="about_patients_overview_title" class="form-label">About Patients Overview Title</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                name="about_patients_overview_title"
-                                id="about_patients_overview_title"
-                                placeholder="Enter Patients Overview Title"
-                                value="{{ old('about_patients_overview_title', isset($Manage_about) ? $Manage_about->about_patients_overview_title : '') }}">
-                            @if ($errors->has('about_patients_overview_title'))
-                            <div class="text-danger">{{ $errors->first('about_patients_overview_title') }}</div>
+                            <label for="hero_section_linkedin_profileimage" class="form-label">Hero Section Banner Image</label>
+                            @if(isset($PagesContantManage) && isset($PagesContantManage['hero_section']['bannerImage']))
+
+                            <div class="mb-2">
+                                <img src="{{ asset('uploads/' . $PagesContantManage['hero_section']['bannerImage']) }}" alt="User Image" class="img-thumbnail" width="100">
+                            </div>
+
+                            <input type="hidden" value="{{ old('hero_section_bannerImage', isset($PagesContantManage) ? $PagesContantManage['hero_section']['bannerImage'] : '') }}" class="form-control" name="hero_section_bannerImage" autocomplete="off">
+
                             @endif
+                            <input type="file" class="form-control" name="hero_section_bannerImage">
                         </div>
-                        <!-- About Patients Overview Description -->
+
                         <div class="col-md-6 mb-3">
-                            <label for="about_patients_overview_description" class="form-label">About Patients Overview Description</label>
-                            <textarea
-                                class="form-control"
-                                name="about_patients_overview_description"
-                                id="about_patients_overview_description"
-                                placeholder="Enter Patients Overview Description"
-                                rows="4">{{ old('about_patients_overview_description', isset($Manage_about) ? $Manage_about->about_patients_overview_description : '') }}</textarea>
-                            @if ($errors->has('about_patients_overview_description'))
-                            <div class="text-danger">{{ $errors->first('about_patients_overview_description') }}</div>
-                            @endif
+                            <label for="hero_section_emergency_number" class="form-label">Emergency Number</label>
+                            <input type="text" class="form-control" name="hero_section_emergency_number" placeholder="Enter Emergency Number" value="{{ old('hero_section_emergency_number', isset($PagesContantManage) ? $PagesContantManage['hero_section']['emergency_number'] : '') }}">
                         </div>
-
-                        <!-- About Patients Overview Video -->
-                        <div class="col-md-12 mb-3">
-                            <label for="about_patients_overview_video" class="form-label">About Patients Overview Video</label>
-
-                            <input
-                                type="text"
-                                class="form-control"
-                                name="about_patients_overview_video"
-                                id="about_patients_overview_video"
-                                accept="video/*"
-                                value="{{ old('about_patients_overview_video', isset($Manage_about) ? $Manage_about->about_patients_overview_video : '') }}"
-                                placeholder="Enter Patients Overview Video URL">
-                            @if ($errors->has('about_patients_overview_video'))
-                            <div class="text-danger">{{ $errors->first('about_patients_overview_video') }}</div>
-                            @endif
-                            <br>
-                            @if(isset($Manage_about) && $Manage_about->about_patients_overview_video)
+                        <div class="col-md-6 mb-3">
+                            <label for="hero_section_linkedin_name" class="form-label">LinkedIn Name</label>
+                            <input type="text" class="form-control" name="hero_section_linkedin_name" placeholder="Enter LinkedIn Name" value="{{ old('hero_section_linkedin_name', isset($PagesContantManage) ? $PagesContantManage['hero_section']['linkedin']['name'] : '') }}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="hero_section_linkedin_profileimage" class="form-label">LinkedIn Profile Image</label>
+                            @if(isset($PagesContantManage) && isset($PagesContantManage['hero_section']['linkedin']['profile_image']))
 
                             <div class="mb-2">
 
-                                <iframe width="560" height="315" src="{{ old('about_patients_overview_video', isset($Manage_about) ? $Manage_about->about_patients_overview_video : '') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="100" height="140px"></iframe>
+                                <img src="{{ asset('uploads/' . $PagesContantManage['hero_section']['linkedin']['profile_image']) }}" alt="User Image" class="img-thumbnail" width="100">
 
                             </div>
+
+                            <input type="hidden" value="{{ old('hero_section_linkedin_profileimage', isset($PagesContantManage) ? $PagesContantManage['hero_section']['linkedin']['profile_image'] : '') }}" class="form-control" name="hero_section_linkedin_profileimage" autocomplete="off">
+
                             @endif
+                            <input type="file" class="form-control" name="hero_section_linkedin_profileimage">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="hero_section_linkedin_description" class="form-label">LinkedIn Description</label>
+                            <textarea class="form-control" name="hero_section_linkedin_description" placeholder="Enter LinkedIn Description">{{ old('hero_section_linkedin_description', isset($PagesContantManage) ? $PagesContantManage['hero_section']['linkedin']['description'] : '') }}</textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="hero_section_linkedin_profile_link" class="form-label">LinkedIn Profile Link</label>
+                            <input type="text" class="form-control" name="hero_section_linkedin_profile_link" placeholder="Enter LinkedIn Profile Link" value="{{ old('hero_section_linkedin_profile_link', isset($PagesContantManage) ? $PagesContantManage['hero_section']['linkedin']['profile_link'] : '') }}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_email_subscribe_title" class="form-label">Email Subscribe Title</label>
+                            <input type="text" class="form-control" name="home_section_email_subscribe_title" placeholder="Enter Email Subscribe Title" value="{{ old('home_section_email_subscribe_title', isset($PagesContantManage) ? $PagesContantManage['home_section']['email_subscribe']['title'] : '') }}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_email_subscribe_description" class="form-label">Email Subscribe Description</label>
+                            <textarea class="form-control" name="home_section_email_subscribe_description" placeholder="Enter Email Subscribe Description">{{ old('home_section_email_subscribe_description', isset($PagesContantManage) ? $PagesContantManage['home_section']['email_subscribe']['description'] : '') }}</textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_email_subscribe_image" class="form-label">Email Subscribe Image</label>
+                            @if(isset($PagesContantManage) && $PagesContantManage['home_section']['email_subscribe']['image'])
+                            <div class="mb-2">
+                                <img src="{{ asset('uploads/' . $PagesContantManage['home_section']['email_subscribe']['image']) }}" alt="User Image" class="img-thumbnail" width="100">
+                            </div>
+                            <input type="hidden" value="{{ old('hero_section_linkedin_profileimage', isset($PagesContantManage) ? $PagesContantManage['home_section']['email_subscribe']['image'] : '') }}" class="form-control" name="home_section_email_subscribe_image" autocomplete="off">
+                            @endif
+                            <input type="file" class="form-control" name="home_section_email_subscribe_image" value="{{ old('home_section_email_subscribe_image', isset($PagesContantManage) ? $PagesContantManage['home_section']['email_subscribe']['image'] : '') }}" accept="image/*">
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label for="home_section_dental_treatments_contant" class="form-label">Dental Treatments Content</label>
+                            <textarea type="text" class="form-control" name="home_section_dental_treatments_contant" placeholder="Enter Dental Treatments Content" id="home_section_dental_treatments_contant">{{ old('home_section_dental_treatments_contant', isset($PagesContantManage) ? $PagesContantManage['home_section']['dental_treatments_content'] : '') }}</textarea>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_dental_treatments_image" class="form-label">Dental Treatments Image</label>
+
+                            @if(isset($PagesContantManage) && $PagesContantManage['home_section']['dental_treatments_image'])
+                            <div class="mb-2">
+                                <img src="{{ asset('uploads/' . $PagesContantManage['home_section']['dental_treatments_image']) }}" alt="User Image" class="img-thumbnail" width="100">
+                            </div>
+                            <input type="hidden" value="{{ old('hero_section_linkedin_profileimage', isset($PagesContantManage) ? $PagesContantManage['home_section']['dental_treatments_image'] : '') }}" class="form-control" name="home_section_dental_treatments_image" autocomplete="off">
+                            @endif
+
+                            <input type="file" class="form-control" name="home_section_dental_treatments_image" placeholder="Enter Video Section Title" value="{{ old('home_section_dental_treatments_image', isset($PagesContantManage) ? $PagesContantManage['home_section']['dental_treatments_image'] : '') }}">
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label for="home_section_smile_content" class="form-label">Smile Section Content</label>
+                            <textarea type="text" class="form-control" name="home_section_smile_content" placeholder="Enter Smile Section Content" id="home_section_smile_content">{{ old('home_section_smile_content', isset($PagesContantManage) ? $PagesContantManage['home_section']['smile_content'] : '') }}</textarea>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_smile_image" class="form-label">Smile Section Image</label>
+                            @if(isset($PagesContantManage) && isset($PagesContantManage['home_section']['smile_image']))
+
+                            <div class="mb-2">
+
+                                <img src="{{ asset('uploads/' . $PagesContantManage['home_section']['smile_image']) }}" alt="User Image" class="img-thumbnail" width="100">
+
+                            </div>
+
+                            <input type="hidden" value="{{(isset($PagesContantManage)?$PagesContantManage['home_section']['smile_image']:old('image'))}}" class="form-control" name="home_section_smile_image" autocomplete="off">
+
+                            @endif
+                            <input type="file" class="form-control" name="home_section_smile_image" placeholder="Enter Video Section Title" value="">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_video_title" class="form-label">Video Section Title</label>
+                            <input type="text" class="form-control" name="home_section_video_title" placeholder="Enter Video Section Title" value="{{ old('home_section_video_title', isset($PagesContantManage) ? $PagesContantManage['home_section']['video']['title'] : '') }}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_video_description" class="form-label">Video Section Description</label>
+                            <textarea class="form-control" name="home_section_video_description" placeholder="Enter Video Section Description">{{ old('home_section_video_description', isset($PagesContantManage) ? $PagesContantManage['home_section']['video']['description'] : '') }}</textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_video_url" class="form-label">Video Section URL</label>
+                            <input type="text" class="form-control" name="home_section_video_url" placeholder="Enter Video URL" value="{{ old('home_section_video_url', isset($PagesContantManage) ? $PagesContantManage['home_section']['video']['url'] : '') }}">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_footer_title" class="form-label">Footer Banner Title</label>
+                            <input type="text" class="form-control" name="home_section_footer_title" placeholder="Enter Footer Banner Title" value="{{ old('home_section_footer_title', isset($PagesContantManage) ? $PagesContantManage['home_section']['footer']['title'] : '') }}">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_footer_description" class="form-label">Footer Banner Description</label>
+                            <textarea type="text" class="form-control" name="home_section_footer_description" placeholder="Enter Footer Banner Description">{{ old('home_section_footer_description', isset($PagesContantManage) ? $PagesContantManage['home_section']['footer']['description'] : '') }}</textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="home_section_footer_image" class="form-label">Footer Banner Image</label>
+                            @if(isset($PagesContantManage) && $PagesContantManage['home_section']['footer']['image'])
+
+                            <div class="mb-2">
+
+                                <img src="{{ asset('uploads/' . $PagesContantManage['home_section']['footer']['image']) }}" alt="User Image" class="img-thumbnail" width="100">
+
+                            </div>
+
+                            <input type="hidden" value="{{(isset($PagesContantManage)?$PagesContantManage['home_section']['footer']['image']:old('image'))}}" class="form-control" name="home_section_footer_image" autocomplete="off">
+
+                            @endif
+                            <input type="file" class="form-control" name="home_section_footer_image" placeholder="Enter Video URL" value="{{ old('home_section_footer_image', isset($PagesContantManage) ? $PagesContantManage['home_section']['footer']['image'] : '') }}">
                         </div>
                     </div>
-                    <br><br>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-danger"> Update About</button>
+                        <button type="submit" class="btn btn-danger">Update</button>
                         <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary">Back Dashboard</a>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -203,7 +193,7 @@
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('site_description');
-    CKEDITOR.replace('latest_technology_description');
+    CKEDITOR.replace('home_section_smile_content');
+    CKEDITOR.replace('home_section_dental_treatments_contant');
 </script>
 @endsection

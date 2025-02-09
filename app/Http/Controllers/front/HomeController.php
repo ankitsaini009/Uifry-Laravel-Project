@@ -9,6 +9,7 @@ use App\Models\Service;
 use App\Models\Specialist;
 use App\Models\Testimonial;
 use App\Models\Blog;
+use App\Models\PagesContantManage;
 use App\Models\Faq;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
@@ -18,6 +19,13 @@ use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
 
+
+    public function contact_view()
+    {
+        return view('frontend.contact');
+    }
+
+
     public function index()
     {
         $services = Service::latest()->where('status', 'active')->get();
@@ -25,8 +33,13 @@ class HomeController extends Controller
         $Testimonials = Testimonial::latest()->where('status', 'active')->get();
         $Faqs = Faq::latest()->where('status', 'active')->get();
         $Blogs = Blog::latest()->where('status', 'active')->get();
+
+        $jsonData = PagesContantManage::first(); // Fetch the data from the database
+        $PagesContantManage = json_decode($jsonData->home_page_content, true);
+        //dd($PagesContantManage);
+
         //dd($Blogs);
-        return view('frontend.index', compact('services', 'specialists', 'Testimonials', 'Faqs', 'Blogs'));
+        return view('frontend.index', compact('services', 'specialists', 'Testimonials', 'Faqs', 'Blogs', 'PagesContantManage'));
     }
 
     public function userchangepass()

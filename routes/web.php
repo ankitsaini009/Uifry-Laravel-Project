@@ -15,7 +15,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SpecialistsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AppointmentsController;
-use App\Http\Controllers\HomePageManageController;
+use App\Http\Controllers\PagesContantManageController;
 
 use App\Http\Controllers\front\HomeController;
 use App\Http\Controllers\front\RegistertionController;
@@ -58,6 +58,10 @@ Route::middleware('auth:front_user')->group(function () {
 });
 
 Route::prefix('/')->group(function () {
+
+
+    Route::any('/contact-view', [HomeController::class, 'contact_view'])->name('view.contact');
+
 
     Route::get('/', [HomeController::class, 'index'])->name('front.index');
     Route::get('/login-user', [RegistertionController::class, 'login'])->name('front.login');
@@ -160,8 +164,8 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('manage_homepage')->group(function () {
 
-        Route::any('/manage-homepage-update', [HomePageManageController::class, 'homepageupdate'])->name('Manage_homepage.update');
-        Route::get('/', [HomePageManageController::class, 'homepageShow'])->name('Manage_homepage.show');
+        Route::any('/manage-homepage-update', [PagesContantManageController::class, 'homepageupdate'])->name('Manage_homepage.update');
+        Route::get('/', [PagesContantManageController::class, 'homepageShow'])->name('Manage_homepage.show');
     });
 
     Route::prefix('manage_about')->group(function () {

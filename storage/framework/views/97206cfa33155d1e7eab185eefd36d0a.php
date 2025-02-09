@@ -53,4 +53,4 @@ $settings;
 <script src="<?php echo e(asset('front_assets/public/js/index.js')); ?>"></script>
 </body>
 
-</html><?php /**PATH E:\xampp\htdocs\laravel-uifry\resources\views/frontend/layout/footer.blade.php ENDPATH**/ ?>
+</html><?php /**PATH F:\xampp\htdocs\laravel-uifry\resources\views/frontend/layout/footer.blade.php ENDPATH**/ ?>

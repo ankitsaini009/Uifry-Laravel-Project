@@ -33,7 +33,7 @@ $settings;
                     <li class="font-medium"><a href="service.html">Services</a></li>
                     <li class="font-medium"><a href="blog.html">Blogs</a></li>
                     <li class="font-medium"><a href="about.html">About</a></li>
-                    <li class="font-medium"><a href="contact.html">Contact</a></li>
+                    <li class="font-medium"><a href="{{ route('view.contact') }}">Contact</a></li>
                 </ul>
                 <div class="flex items-center lg:gap-5 gap-2.5">
                     <div class="relative z-10">
