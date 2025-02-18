@@ -1,0 +1,322 @@
+[07-Nov-2024 07:10:43 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php:912
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(912): ReflectionClass->__construct('config')
+#1 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate\Container\Container->build('config')
+#2 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(961): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(946): Illuminate\Container\Container->make('config', Array)
+#5 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(1454): Illuminate\Foundation\Application->make('config')
+#6 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(560): Illuminate\Container\Container->offsetGet('config')
+#7 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(611): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\LogManager->driver()
+#10 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error('Illuminate\\Conf...', Array)
+#11 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable(Object(TypeError))
+#12 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): Illuminate\Foundation\Exceptions\Handler->report(Object(TypeError))
+#13 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\Foundation\Http\Kernel->reportException(Object(TypeError))
+#14 /home/dmprojects/public_html/ankitsaini/flight_tour/public/index.php(51): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php:914
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate\Container\Container->build('config')
+#1 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(961): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(946): Illuminate\Container\Container->make('config', Array)
+#4 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(1454): Illuminate\Foundation\Application->make('config')
+#5 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(560): Illuminate\Container\Container->offsetGet('config')
+#6 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(611): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\LogManager->driver()
+#9 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error('Illuminate\\Conf...', Array)
+#10 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable(Object(TypeError))
+#11 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): Illuminate\Foundation\Exceptions\Handler->report(Object(TypeError))
+#12 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\Foundation\Http\Kernel->reportException(Object(TypeError))
+#13 /home/dmprojects/public_html/ankitsaini/flight_tour/public/index.php(51): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 914
+[07-Nov-2024 07:10:45 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php:912
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(912): ReflectionClass->__construct('config')
+#1 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate\Container\Container->build('config')
+#2 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(961): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(946): Illuminate\Container\Container->make('config', Array)
+#5 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(1454): Illuminate\Foundation\Application->make('config')
+#6 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(560): Illuminate\Container\Container->offsetGet('config')
+#7 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(611): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\LogManager->driver()
+#10 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error('Illuminate\\Conf...', Array)
+#11 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable(Object(TypeError))
+#12 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): Illuminate\Foundation\Exceptions\Handler->report(Object(TypeError))
+#13 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\Foundation\Http\Kernel->reportException(Object(TypeError))
+#14 /home/dmprojects/public_html/ankitsaini/flight_tour/public/index.php(51): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php:914
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate\Container\Container->build('config')
+#1 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(961): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(946): Illuminate\Container\Container->make('config', Array)
+#4 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(1454): Illuminate\Foundation\Application->make('config')
+#5 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(560): Illuminate\Container\Container->offsetGet('config')
+#6 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(611): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\LogManager->driver()
+#9 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error('Illuminate\\Conf...', Array)
+#10 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable(Object(TypeError))
+#11 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): Illuminate\Foundation\Exceptions\Handler->report(Object(TypeError))
+#12 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\Foundation\Http\Kernel->reportException(Object(TypeError))
+#13 /home/dmprojects/public_html/ankitsaini/flight_tour/public/index.php(51): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 914
+[07-Nov-2024 07:10:47 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "config" does not exist in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php:912
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(912): ReflectionClass->__construct('config')
+#1 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate\Container\Container->build('config')
+#2 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(961): Illuminate\Container\Container->resolve('config', Array, true)
+#3 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate\Foundation\Application->resolve('config', Array)
+#4 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(946): Illuminate\Container\Container->make('config', Array)
+#5 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(1454): Illuminate\Foundation\Application->make('config')
+#6 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(560): Illuminate\Container\Container->offsetGet('config')
+#7 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(611): Illuminate\Log\LogManager->getDefaultDriver()
+#8 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\Log\LogManager->parseDriver(NULL)
+#9 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\LogManager->driver()
+#10 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error('Illuminate\\Conf...', Array)
+#11 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable(Object(TypeError))
+#12 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): Illuminate\Foundation\Exceptions\Handler->report(Object(TypeError))
+#13 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\Foundation\Http\Kernel->reportException(Object(TypeError))
+#14 /home/dmprojects/public_html/ankitsaini/flight_tour/public/index.php(51): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#15 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [config] does not exist. in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php:914
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate\Container\Container->build('config')
+#1 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(961): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(946): Illuminate\Container\Container->make('config', Array)
+#4 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php(1454): Illuminate\Foundation\Application->make('config')
+#5 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(560): Illuminate\Container\Container->offsetGet('config')
+#6 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(611): Illuminate\Log\LogManager->getDefaultDriver()
+#7 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\Log\LogManager->parseDriver(NULL)
+#8 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\LogManager->driver()
+#9 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error('Illuminate\\Conf...', Array)
+#10 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable(Object(TypeError))
+#11 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): Illuminate\Foundation\Exceptions\Handler->report(Object(TypeError))
+#12 /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\Foundation\Http\Kernel->reportException(Object(TypeError))
+#13 /home/dmprojects/public_html/ankitsaini/flight_tour/public/index.php(51): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#14 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/flight_tour/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 914
+[11-Nov-2024 06:12:52 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\front\HomeController, because the name is already in use in /home/dmprojects/public_html/ankitsaini/flight_tour/app/Http/Controllers/front/RegistertionController.php on line 8
+[11-Nov-2024 06:13:26 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\front\HomeController, because the name is already in use in /home/dmprojects/public_html/ankitsaini/flight_tour/app/Http/Controllers/front/RegistertionController.php on line 8
+[17-Feb-2025 10:55:08 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:55:17 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:55:18 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:55:18 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:55:19 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:55:19 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:58:59 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:01 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:02 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:03 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:14 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:35 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:36 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 10:59:37 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:00:09 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:00:11 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:00:11 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:00:12 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:01:23 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:01:39 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:01:43 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:01:46 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:01:48 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\Factory" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php:24
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/SocialiteManager.php on line 24
+[17-Feb-2025 11:09:06 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\User" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/AbstractUser.php:8
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/AbstractUser.php on line 8
+[17-Feb-2025 11:09:08 UTC] PHP Fatal error:  Uncaught Error: Interface "Laravel\Socialite\Contracts\User" not found in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/AbstractUser.php:8
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(41): require()
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('Laravel\\Sociali...', '/home/dmproject...')
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#3 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#4 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/laravel/socialite/src/AbstractUser.php on line 8
+[17-Feb-2025 11:10:41 UTC] PHP Warning:  require(/home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/../phpseclib/phpseclib/phpseclib/bootstrap.php): Failed to open stream: No such file or directory in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php on line 41
+[17-Feb-2025 11:10:41 UTC] PHP Warning:  require(/home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/../phpseclib/phpseclib/phpseclib/bootstrap.php): Failed to open stream: No such file or directory in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php on line 41
+[17-Feb-2025 11:10:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/../phpseclib/phpseclib/phpseclib/bootstrap.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php(45): {closure}('decc78cc4436b12...', '/home/dmproject...')
+#1 /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/autoload.php(25): ComposerAutoloaderInite512d78efe2ebf8b511835f71b81ff3c::getLoader()
+#2 /home/dmprojects/public_html/ankitsaini/laravel-uifry/public/index.php(34): require('/home/dmproject...')
+#3 {main}
+  thrown in /home/dmprojects/public_html/ankitsaini/laravel-uifry/vendor/composer/autoload_real.php on line 41
