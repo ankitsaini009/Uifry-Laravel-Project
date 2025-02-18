@@ -2,6 +2,8 @@ Uifry-Laravel-Project
 
 Uifry-Laravel-Project is a dental management web application built using Laravel. This project is designed to offer comprehensive dental services, including an easy-to-use interface for patients and dental professionals. Key features of this application include:
 
+Live  Project Link : -------> https://dmprojects.xyz/ankitsaini/laravel-uifry/public/
+
 Features
 
 Google Authentication: Users can sign in securely using their Google account.
